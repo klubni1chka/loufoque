@@ -1,0 +1,124 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<ul>-->
+<!--    <li><a href="home"><h4>Home</h4></a></li>-->
+<!--    <li><a href="tests"><h4>Tests</h4></a></li>-->
+<!--</ul>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--root.html-->
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="assignment2/routes/public/css/style.css">
+    <script src="root.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid px-5">
+        <a class="navbar-brand" href="#">Loufoque</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class=" navbar-nav ms-auto">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">Tests</a>
+                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Log in</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!--<div id="main">-->
+<!--    <div class="intro">-->
+<!--        <hr>-->
+<!--        <h2>Платформа Loufoque- сайт с различными психологическими тестами</h2>-->
+<!--        <hr>-->
+<!--    </div>-->
+
+
+<!--    <div class="text">-->
+<!--      <span>-->
+<!--  Концепция тесты психологичского и развлекательного характера.-->
+<!-- Будьте с нами и вы сможете получше узнать самого себя также забавно и полезно провести свой досуг.-->
+<!--  </span>-->
+<!--    </div>-->
+<!--</div>-->
+<main>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="container-fluid col-md-5 p-lg-5 mx-auto my-5 ">
+            <h1 class="display-4 fw-normal">Loufoque- </h1>
+            <p class="lead fw-normal">Будьте с нами и вы сможете получше узнать самого себя также забавно и полезно провести свой досуг</p>
+            <a class="btn btn-outline-primary" href="javascript:void(0);" onclick="soundClick();" id="relax">Relax</a>
+
+
+        </div>
+
+        <div class="product-device shadow-sm d-none d-md-block"></div>
+        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active ">
+                <img src="https://the-steppe.com/images/news/475x300/5747-pzeTt50q.JPG" class="d-block w-100" alt="https://the-steppe.com/images/news/475x300/5747-pzeTt50q.JPG">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://the-steppe.com/images/news/475x300/4689-bpRBov3G.jpg" class="d-block w-100" alt="https://the-steppe.com/images/news/475x300/4689-bpRBov3G.jpg">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://i.pinimg.com/originals/9c/65/48/9c65487204ff561256b6a3426c59df22.png" class="d-block w-100" alt="https://i.pinimg.com/originals/9c/65/48/9c65487204ff561256b6a3426c59df22.png">
+            </div>
+
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <ul class="">
+        <li><a href="test1"><h4>Тест Юнга</h4></a></li>
+        <li><a href="test2"><h4>Профориентация</h4></a></li>
+        <li><a href="test3"><h4>Тип личности</h4></a></li>
+        <li><a href="test4"><h4>Язык любви</h4></a></li>
+        <li><a href="test5"><h4>Уровень депрессии</h4></a></li>
+        <li><a href="apiCall"><h4>Вдохновись...</h4></a></li>
+    </ul>
+<!--    <picture>-->
+<!--        <source srcset="https://kartinkin.net/uploads/posts/2021-07/1625669026_5-kartinkin-com-p-zhabki-milie-arti-art-krasivo-5.jpg" type="image/svg+xml">-->
+<!--        <img src="https://kartinkin.net/uploads/posts/2021-07/1625669026_5-kartinkin-com-p-zhabki-milie-arti-art-krasivo-5.jpg" class="img-fluid img-thumbnail max-width: 100%; height: auto;" alt="https://kartinkin.net/uploads/posts/2021-07/1625669026_5-kartinkin-com-p-zhabki-milie-arti-art-krasivo-5.jpg">-->
+<!--    </picture>-->
+
+<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="routes/sound.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</main>
+</body>
+</html>
