@@ -13,8 +13,8 @@ router
         const listUsers = async () => {
             try {
                 const axiosResponse = await axios.get('https://api.kanye.rest/');
-                res.send("<h1>Your Quote</h1>" +
-                    "<p>"+axiosResponse.data.quote+"</p>" +
+                res.send("<h1></h1>" +
+                    "<p style='font-size:100px; '>"+axiosResponse.data.quote+"</p>" +
                     "<br><br>" + "" +
                     "<form action=\"apiCall\" method=\"post\">\n" +
                     "    <button type=\"submit\">Get another Quotex</button>\n" +
