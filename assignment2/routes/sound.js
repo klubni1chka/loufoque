@@ -1,23 +1,9 @@
 const relax= new Audio("routes/sounds/relax.mp3");
-
-// function soundClick() {
-//     $('#relax').click(function(){
-//         if(relax.paused) {
-//             relax.play();
-//         }
-//         else {
-//             relax.pause();
-//         }
-//     });
-// }
-function soundClick() {
-    $('#relax').click(function(){
+    document.querySelector('#relax').addEventListener("click",function(){
         if(relax.paused) {
-            relax.play();
-        }
+            relax.play().then(r => relax.play()) }
         else {
             relax.pause();
         }
     });
-}
 
