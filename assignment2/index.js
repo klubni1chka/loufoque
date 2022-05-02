@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-
+const mongoose = require('mongoose');
+mongoose.connect("mongodb+srv://Assel:18AhYuNjzP4kpnVS@cluster0.sefax.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    .then(()=> {console.log("mongodb.connect")})
 app.use("/", require("./routes/root.js"));
 app.use("/test1", require("./routes/test1.js"));
 app.use("/test2", require("./routes/test2.js"));
