@@ -13,8 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // app.use(express.static('public'))
 // app.use(methodOverride('_method'))
 //mongodb+srv://Assel:18AhYuNjzP4kpnVS@cluster0.sefax.mongodb.net/notesDB?retryWrites=true&w=majority
-mongoose.connect("mongodb://localhost:27017/node-demo")
-    // {useNewUrlParser:true},{useUnifiedTopology:true}
+mongoose.connect("mongodb://localhost:27017/node-demo",
+     // {useNewUrlParser:true, useUnifiedTopology:true}
+)
     .then(()=> {console.log("mongodb.connect")})
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -30,20 +31,12 @@ app.use("/test5", require("./routes/test5.js"));
 app.use("/test6", require("./routes/test6.js"));
 app.use("/apiCall", require("./routes/apiCall.js"));
 
-app.use("/regis",require("./routes/regis.js"));
+app.use("/regis", require("./routes/regis.js"));
 
 
 app.use(express.static("./assignment2/routes/public/css/style.css"));
 
-app.post("/",function (req,res)
-{
-    let newNote=new Note({
-        firstname:req.body.title,
-        lastName:req.body.content
-    })
-        newNote.save()
-    res.redirect("/")
-})
+
 app.listen(port, () =>
     console.log(`App listening at http://localhost:${port}`)
 );
@@ -64,38 +57,3 @@ app.post("/add-name",(req, res) => {
         });
 
 });
-// app.get('/', (req, res) => {
-//     res.render('index');
-// });
-// app.get('/find', (req, res) => {
-//     res.render('find');
-// });
-// app.get('/update', (req, res) => {
-//     res.render('update');
-// });
-//
-// app.get('/delete', (req, res) => {
-//     res.render('delete');
-// });
-
-// const notesSchema={
-//     firstname:{
-//         type:String
-//     },
-//     lastName:{
-//     type:String
-// }
-// }
-// const Note=mongoose.model("Note",notesSchema)
-// router
-//     .route("/")
-//     .get((req, res) =>res.sendFile(__dirname+'/routes.html') )
-//     .post((req, res) => {
-//         let newNote=new Note({
-//             firstName: req.body.title,
-//             lastName: req.body.content
-//         })
-//         newNote.save();
-//         res.redirect("/test1")
-//     })
-// module.exports=router
